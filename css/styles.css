@@ -6,11 +6,12 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: #FAFAFA;
 }
 
 .container {
   width: 100%;
-  max-width: 1167px;
+  max-width: 1166px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -57,7 +58,7 @@ img {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.17;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
@@ -69,6 +70,7 @@ img {
 
 .header-logo {
   display: flex;
+  gap: 4px;
   align-items: center;
   padding-top: 24px;
   padding-bottom: 32px;
@@ -76,7 +78,7 @@ img {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
@@ -86,33 +88,40 @@ img {
 
 .header-container {
   display: flex;
+  gap: 90px;
 }
 
 .header-navigation {
   display: flex;
   align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .header-menu {
   display: flex;
+  gap: 24px;
+}
+
+.header-menu-link {
+  
+}
+
+.header-socials {
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
 
 .header-menu-link {
   display: block;
   padding-top: 24px;
   padding-bottom: 32px;
-}
-
-.header-socials {
-  display: flex;
-}
-
-.header-menu-link {
   color: var(--black-text-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
 }
 
 .header-menu-link:hover,
@@ -120,18 +129,37 @@ img {
   color: var(--accent-color);
 }
 
+.header-socials-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
 /*---------HERO----------*/
 
 .hero {
+  padding-bottom: 72px;
+}
+
+.hero-container {
   background-color: #2c2825;
+  border-radius: 30px;
+  padding: 381px 40px 40px;
 }
 
 .hero-title {
+  max-width: 484px;
   color: var(--white-text-color);
   font-size: 28px;
   font-weight: 500;
   line-height: 1.21;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
 }
 
 .hero-btn {
@@ -141,12 +169,19 @@ img {
   font-weight: 600;
   cursor: pointer;
   background-color: var(--accent-color);
+  padding: 14px 40px;
+  margin-right: 14px;
+  border: none;
+  border-radius: 100px;
 }
 
 .hero-link {
   color: var(--white-text-color);
   font-size: 14px;
   font-weight: 600;
+  padding: 14px 40px;
+  border: 1px solid #FFF;
+  border-radius: 100px;
 }
 
 .hero-down {
@@ -155,22 +190,31 @@ img {
   font-weight: 500;
   line-height: 1.29;
   letter-spacing: 0.03em;
+  margin-left: auto;
 }
 
 /*---------ADVANTAGES----------*/
 
 .advantages {
   background-color: #1E1823;
+  padding: 50px 0;
 }
 
-.advantages-list {}
+.advantages-list {
+  padding: 0 18px;
+  display: flex;
+  gap: 88px;
+}
 
-.advantages-item {}
+.advantages-item {
+  width: calc((100% - 88px * 2) / 3);
+}
 
 .advantages-subtitle {
   color: var(--white-text-color);
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 18px;
 }
 
 .advantages-item-text {
@@ -181,21 +225,43 @@ img {
 
 /*---------TASTE----------*/
 
-.taste {}
+.taste {
+  padding-top: 100px;
+}
+
+.taste-title {
+  max-width: 411px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
 
 .taste-text {
+  max-width: 486px;
+  margin: 0 auto;
+  margin-bottom: 50px;
   color: var(--black-text-color);
   text-align: center;
   font-size: 14px;
   line-height: 1.29;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
 }
 
-.taste-list {}
+.taste-list {
+  display: flex;
+  gap: 19px;
+}
 
-.taste-item {}
+.taste-item {
+  width: calc((100% - 19px * 3) / 4);
+  border-radius: 15px;
+  outline: 1px solid #FD9222;
+  background: #FFF;
+  padding: 28px 36px 28px 28px;
+}
 
-.taste-img {}
+.taste-img {
+  margin-bottom: 36px;
+}
 
 .taste-subtitle {
   font-size: 14px;
@@ -215,24 +281,46 @@ img {
 
 /*---------MADE----------*/
 
-.made {}
+.made {
+  padding-top: 100px;
+}
+
+.made-title {
+  margin-bottom: 50px;
+}
+
+.made-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.made-content {
+  padding: 32px;
+  background-color: #fff;
+}
 
 .made-head {
   color: var(--black-text-color);
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
+  max-width: 350px;
+  margin-bottom: 28px;
 }
 
-.made-list {}
+.made-list {
+  padding-left: 16px;
+}
 
-.made-item {}
+.made-item:not(:last-child) {
+  margin-bottom: 24px;
+}
 
 .made-item-text {
   color: var(--black-text-color);
   font-size: 14px;
   line-height: 1.29;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
 }
 
 /*---------LOVED----------*/
