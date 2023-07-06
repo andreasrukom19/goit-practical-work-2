@@ -291,12 +291,14 @@ img {
 
 .made-wrap {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .made-content {
   padding: 32px;
   background-color: #fff;
+  border-radius: 15px;
+  width: 516px;
 }
 
 .made-head {
@@ -310,6 +312,7 @@ img {
 
 .made-list {
   padding-left: 16px;
+  width: 425px;
 }
 
 .made-item:not(:last-child) {
@@ -325,7 +328,9 @@ img {
 
 /*---------LOVED----------*/
 
-.loved {}
+.loved {
+  padding-top: 100px;
+}
 
 .loved-list {}
 
