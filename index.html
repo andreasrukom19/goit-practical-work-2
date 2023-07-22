@@ -644,7 +644,9 @@
               </p>
             </li>
           </ul>
-          <button type="button" class="loved-btn">Leave a review</button>
+          <button type="button" class="loved-btn" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
     </main>
@@ -748,9 +750,9 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-btn">
+        <button type="button" class="close-btn" data-modal-close>
           <svg class="close-icon" width="28" height="28">
             <use href="./images/icons.svg#close"></use>
           </svg>
@@ -801,10 +803,38 @@
               </svg>
             </div>
           </div>
+          <div class="modal-field">
+            <label for="user-comment" class="modal-label">Comment</label>
+            <textarea
+              name="user-comment"
+              id="user-comment"
+              class="comment-field modal-input"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+          <div class="policy-wrap">
+            <input
+              type="checkbox"
+              name="user-policy"
+              id="user-policy"
+              class="user-policy-input visually-hidden"
+              value="true"
+            />
+            <label for="user-policy" class="user-policy-label">
+              <span class="check-field">
+                <svg class="check-icon" width="10" height="10">
+                  <use href="./images/icons.svg#checkmark"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="policy-link">Privacy Policy</a>
+            </label>
+          </div>
+          <button type="submit" class="modal-form-btn">Send</button>
         </form>
       </div>
     </div>
 
-    <script src="./js/overlay.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

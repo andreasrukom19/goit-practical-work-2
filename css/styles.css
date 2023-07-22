@@ -989,9 +989,7 @@ a {
   height: 68px;
   background-color: transparent;
   outline: none;
-  font-family: Montserrat;
   font-size: 18px;
-  font-weight: 400;
   line-height: normal;
   letter-spacing: -0.02em;
   padding-left: 62px;
@@ -1016,4 +1014,67 @@ a {
 
 .modal-input:focus + .input-icon {
   fill: #FD9222;
+}
+
+.comment-field {
+  height: 137px;
+  resize: none;
+  padding: 22px 24px;
+}
+
+.comment-field::placeholder {
+  color: rgba(64, 64, 64, 0.30);
+}
+
+.policy-wrap {
+  margin-bottom: 42px;
+}
+
+.user-policy-label {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.60);
+}
+
+.policy-link {
+  color: #FD9222;
+}
+
+.check-field {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  margin-right: 8px;
+  fill: transparent;
+  transition: border 300ms, background-color 300ms, fill 300ms;
+}
+
+.user-policy-input:checked + .user-policy-label .check-field {
+  border: none;
+  background-color: #FD9222;
+  fill: #FFF;
+}
+
+.modal-form-btn {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 100px;
+  background-color: #FD9222;
+  border: none;
+  padding: 14px 40px;
+  cursor: pointer;
+  min-width: 117px;
+  transition: background-color 300ms, outline 300ms, color 300ms;
+}
+
+.modal-form-btn:is(:hover, :focus) {
+  background-color: transparent;
+  outline: 1px solid #FD9222;
+  color: #FD9222;
 }
