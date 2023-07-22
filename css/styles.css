@@ -890,6 +890,7 @@ a {
   cursor: pointer;
   transition: background-color 300ms ease, color 300ms ease;
   margin-left: 4px;
+  border: none;
 }
 
 .subscription-btn:is(:hover, :focus) {
