@@ -18,21 +18,32 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
-          <a class="header-logo link" href="./index.html"
-            ><span class="header-logo-accent">Simply</span> Chocolate
-            <img src="./images/logo-icon.svg" alt="Logo Icon"
-          /></a>
+          <a class="header-logo link" href="./index.html">
+            <span class="header-logo-accent">Simply</span> Chocolate
+            <span class="logo-icon-container">
+              <svg class="logo-icon" width="21" height="21">
+                <use href="./images/icons.svg#chocolate-icon"></use>
+              </svg>
+            </span>
+          </a>
           <ul class="header-menu list">
             <li class="header-menu-item">
               <a class="header-menu-link link" href="#">Home</a>
             </li>
             <li class="header-menu-item">
               <a class="header-menu-link link" href="#made">How it’s made?</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="header-menu-link link" href="#products">Our products</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="header-menu-link link" href="#sellers">Top sellers</a>
             </li>
             <li class="header-menu-item">
               <a class="header-menu-link link" href="#loved"
@@ -77,6 +88,83 @@
               rel="no-opener no-refferer"
             >
               <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <button type="button" class="header-menu-btn" data-menu-open>
+          <svg class="menu-hamburger" width="28" height="28">
+            <use href="./images/icons.svg#menu-hamburger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="header-mob-menu is-hidden-mob" data-menu>
+        <div class="top-block-menu">
+          <button type="button" class="menu-close-btn" data-menu-close>
+            <svg class="mob-menu-close-icon" width="28" height="28">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <nav class="mob-navigation">
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-item">
+                <a href="#" class="mob-menu-link link is-active">Home</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="#made" class="mob-menu-link link">How it’s made?</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="#products" class="mob-menu-link link">Our products</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="#sellers" class="mob-menu-link link">Top sellers</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="#loved" class="mob-menu-link link">
+                  Chocolate is loved
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <ul class="mob-social-list list">
+          <li class="mob-social-item">
+            <a
+              class="mob-social-link link"
+              href="https://www.instagram.com/"
+              aria-label="instagram"
+              target="_blank"
+              rel="no-opener no-refferer"
+            >
+              <svg class="social-icon" width="20" height="20">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-social-item">
+            <a
+              class="mob-social-link link"
+              href="https://www.facebook.com/"
+              aria-label="facebook"
+              target="_blank"
+              rel="no-opener no-refferer"
+            >
+              <svg class="social-icon" width="20" height="20">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-social-item">
+            <a
+              class="mob-social-link link"
+              href="https://twitter.com/"
+              aria-label="twitter"
+              target="_blank"
+              rel="no-opener no-refferer"
+            >
+              <svg class="social-icon" width="20" height="20">
                 <use href="./images/icons.svg#twitter"></use>
               </svg>
             </a>
@@ -167,13 +255,28 @@
           </h2>
           <ul class="taste-list list">
             <li class="taste-item">
-              <img
-                src="./images/milk-chocolate.png"
-                alt="Milk Chocolate"
-                width="206"
-                height="160"
-                class="taste-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/milk-chocolate-desk.png    1x,
+                    ./images/milk-chocolate-desk-2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/milk-chocolate.png    1x,
+                    ./images/milk-chocolate-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/milk-chocolate.png"
+                  alt="Milk Chocolate"
+                  width="236"
+                  class="taste-img"
+                />
+              </picture>
               <h3 class="taste-subtitle">Milk Chocolate</h3>
               <button type="button" class="arrow-open">
                 <svg class="arrow-open-icon" width="24" height="24">
@@ -196,13 +299,25 @@
               </div>
             </li>
             <li class="taste-item">
-              <img
-                src="./images/milk.png"
-                alt="Milk Chocolate"
-                width="206"
-                height="160"
-                class="taste-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/milk-desk.png    1x,
+                    ./images/milk-desk-2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="./images/milk.png 1x, ./images/milk-2x.png 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/milk.png"
+                  alt="Milk"
+                  width="236"
+                  class="taste-img"
+                />
+              </picture>
               <h3 class="taste-subtitle">Milk</h3>
               <button type="button" class="arrow-open">
                 <svg class="arrow-open-icon" width="24" height="24">
@@ -226,13 +341,25 @@
               </div>
             </li>
             <li class="taste-item">
-              <img
-                src="./images/nuts.png"
-                alt="Milk Chocolate"
-                width="206"
-                height="160"
-                class="taste-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/nuts-desk.png    1x,
+                    ./images/nuts-desk-2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="./images/nuts.png 1x, ./images/nuts-2x.png 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/nuts.png"
+                  alt="Nuts"
+                  width="236"
+                  class="taste-img"
+                />
+              </picture>
               <h3 class="taste-subtitle">Nuts</h3>
               <button type="button" class="arrow-open">
                 <svg class="arrow-open-icon" width="24" height="24">
@@ -256,13 +383,28 @@
               </div>
             </li>
             <li class="taste-item">
-              <img
-                src="./images/semi-sweet_chocolate.png"
-                alt="Milk Chocolate"
-                width="206"
-                height="160"
-                class="taste-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/semi-sweet-chocolate-desk.png    1x,
+                    ./images/semi-sweet-chocolate-desk-2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/semi-sweet-chocolate.png    1x,
+                    ./images/semi-sweet-chocolate-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/semi-sweet-chocolate.png"
+                  alt="Semi-sweet Chocolate"
+                  width="236"
+                  class="taste-img"
+                />
+              </picture>
               <h3 class="taste-subtitle">Semi-sweet chocolate</h3>
               <button type="button" class="arrow-open">
                 <svg class="arrow-open-icon" width="24" height="24">
@@ -288,13 +430,25 @@
               </div>
             </li>
             <li class="taste-item">
-              <img
-                src="./images/cacao.png"
-                alt="Milk Chocolate"
-                width="206"
-                height="160"
-                class="taste-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/cacao-desk.png    1x,
+                    ./images/cacao-desk-2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="./images/cacao.png 1x, ./images/cacao-2x.png 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/cacao.png"
+                  alt="Cacao"
+                  width="236"
+                  class="taste-img"
+                />
+              </picture>
               <h3 class="taste-subtitle">Cacao</h3>
               <button type="button" class="arrow-open">
                 <svg class="arrow-open-icon" width="24" height="24">
@@ -318,13 +472,28 @@
               </div>
             </li>
             <li class="taste-item">
-              <img
-                src="./images/raspberry.png"
-                alt="Milk Chocolate"
-                width="206"
-                height="160"
-                class="taste-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/raspberry-desk.png    1x,
+                    ./images/raspberry-desk-2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/raspberry.png    1x,
+                    ./images/raspberry-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/raspberry.png"
+                  alt="Raspberry"
+                  width="236"
+                  class="taste-img"
+                />
+              </picture>
               <h3 class="taste-subtitle">Raspberry</h3>
               <button type="button" class="arrow-open">
                 <svg class="arrow-open-icon" width="24" height="24">
@@ -347,13 +516,25 @@
               </div>
             </li>
             <li class="taste-item">
-              <img
-                src="./images/coconut.png"
-                alt="Milk Chocolate"
-                width="206"
-                height="160"
-                class="taste-img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/coconut-desk.png    1x,
+                    ./images/coconut-desk-2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="./images/coconut.png 1x, ./images/coconut-2x.png 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/coconut.png"
+                  alt="Coconut Oil"
+                  width="236"
+                  class="taste-img"
+                />
+              </picture>
               <h3 class="taste-subtitle">Coconut oil</h3>
               <button type="button" class="arrow-open">
                 <svg class="arrow-open-icon" width="24" height="24">
@@ -383,12 +564,34 @@
         <div class="container">
           <h2 class="made-title section-title">How it’s <span>made?</span></h2>
           <div class="made-wrap">
-            <img
-              src="./images/hot-chocolate.jpg"
-              alt="Hot chocolate"
-              width="600"
-              height="400"
-            />
+            <picture class="picture-block">
+              <source
+                srcset="
+                  ./images/hot-chocolate.jpg    1x,
+                  ./images/hot-chocolate-2x.jpg 2x
+                "
+                media="(min-width: 1168px)"
+              />
+              <source
+                srcset="
+                  ./images/hot-chocolate-tab.jpg    1x,
+                  ./images/hot-chocolate-tab-2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/hot-chocolate-mob.jpg    1x,
+                  ./images/hot-chocolate-mob-2x.jpg 2x
+                "
+                media="(min-width: 320px)"
+              />
+              <img
+                src="./images/hot-chocolate-tab.jpg"
+                alt="Hot chocolate"
+                width="614"
+              />
+            </picture>
             <div class="made-content">
               <p class="made-head">
                 Try our chocolates today and discover the perfect balance of
@@ -431,7 +634,7 @@
         </div>
       </section>
 
-      <section class="products">
+      <section id="products" class="products">
         <div class="container">
           <h2 class="products-title section-title">
             Our <span>products</span>
@@ -439,9 +642,9 @@
           <ul class="products-list list">
             <li class="product-item">
               <img
+                srcset="./images/orange.jpg 1x, ./images/orange.jpg 2x"
                 src="./images/orange.jpg"
                 width="230"
-                height="201"
                 alt="Chocolate Orange"
               />
               <h3 class="product-subtitle">Orange</h3>
@@ -450,9 +653,12 @@
             </li>
             <li class="product-item">
               <img
+                srcset="
+                  ./images/apple-cranberry.jpg    1x,
+                  ./images/apple-cranberry-2x.jpg 2x
+                "
                 src="./images/apple-cranberry.jpg"
                 width="230"
-                height="201"
                 alt="Chocolate Apple&Cranberry"
               />
               <h3 class="product-subtitle">Apple&amp;Cranberry</h3>
@@ -461,9 +667,12 @@
             </li>
             <li class="product-item">
               <img
+                srcset="
+                  ./images/lime_sea-salt.jpg    1x,
+                  ./images/lime_sea-salt-2x.jpg 2x
+                "
                 src="./images/lime_sea-salt.jpg"
                 width="230"
-                height="201"
                 alt="Chocolate Lime&Sea Salt"
               />
               <h3 class="product-subtitle">Lime&Sea Salt</h3>
@@ -472,9 +681,9 @@
             </li>
             <li class="product-item">
               <img
+                srcset="./images/pineapple.jpg 1x, ./images/pineapple-2x.jpg 2x"
                 src="./images/pineapple.jpg"
                 width="230"
-                height="201"
                 alt="Chocolate Pineapple"
               />
               <h3 class="product-subtitle">Pineapple</h3>
@@ -483,9 +692,9 @@
             </li>
             <li class="product-item">
               <img
+                srcset="./images/classic.jpg 1x, ./images/classic-2x.jpg 2x"
                 src="./images/classic.jpg"
                 width="230"
-                height="201"
                 alt="Chocolate Classic"
               />
               <h3 class="product-subtitle">Classic</h3>
@@ -496,8 +705,8 @@
               <img
                 src="./images/honey.jpg"
                 width="230"
-                height="201"
                 alt="Chocolate Honey"
+                srcset="./images/honey.jpg 1x, ./images/honey-2x.jpg 2x"
               />
               <h3 class="product-subtitle">Honey</h3>
               <p class="product-category">Milk chocolate</p>
@@ -505,9 +714,12 @@
             </li>
             <li class="product-item">
               <img
+                srcset="
+                  ./images/roasted-fruits.jpg    1x,
+                  ./images/roasted-fruits-2x.jpg 2x
+                "
                 src="./images/roasted-fruits.jpg"
                 width="230"
-                height="201"
                 alt="Chocolate Roasted Fruits"
               />
               <h3 class="product-subtitle">Roasted Fruits</h3>
@@ -516,9 +728,12 @@
             </li>
             <li class="product-item">
               <img
+                srcset="
+                  ./images/classic-white.jpg    1x,
+                  ./images/classic-white-2x.jpg 2x
+                "
                 src="./images/classic-white.jpg"
                 width="230"
-                height="201"
                 alt="Chocolate Classic"
               />
               <h3 class="product-subtitle">Classic</h3>
@@ -529,7 +744,7 @@
         </div>
       </section>
 
-      <section class="sellers">
+      <section id="sellers" class="sellers">
         <div class="container">
           <h2 class="sellers-title section-title"><span>Top</span> sellers</h2>
           <ul class="sellers-list list">
@@ -537,6 +752,10 @@
               <a href="#" class="sellers-link link">
                 <div class="overlay-wrap">
                   <img
+                    srcset="
+                      ./images/choc-white-nuts.jpg    1x,
+                      ./images/choc-white-nuts-2x.jpg 2x
+                    "
                     src="./images/choc-white-nuts.jpg"
                     alt="Chocolate white nuts"
                     width="368"
@@ -556,6 +775,10 @@
               <a href="#" class="sellers-link link">
                 <div class="overlay-wrap">
                   <img
+                    srcset="
+                      ./images/choc-white-fruits.jpg    1x,
+                      ./images/choc-white-fruits-2x.jpg 2x
+                    "
                     src="./images/choc-white-fruits.jpg"
                     alt="Chocolate white fruits"
                     width="368"
@@ -574,6 +797,10 @@
               <a href="#" class="sellers-link link">
                 <div class="overlay-wrap">
                   <img
+                    srcset="
+                      ./images/dark-chocolate.jpg    1x,
+                      ./images/dark-chocolate-2x.jpg 2x
+                    "
                     src="./images/dark-chocolate.jpg"
                     alt="Dark chocolate"
                     width="368"
@@ -601,11 +828,11 @@
           <ul class="loved-list list">
             <li class="loved-item">
               <img
+                srcset="./images/viktoria.jpg 1x, ./images/viktoria-2x.jpg 2x"
                 class="loved-img"
                 src="./images/viktoria.jpg"
                 alt="Victoria Dobrzhanska"
                 width="80"
-                height="80"
               />
               <h3 class="loved-subtitle">Victoria Dobrzhanska</h3>
               <p class="loved-item-text">
@@ -615,11 +842,11 @@
             </li>
             <li class="loved-item">
               <img
+                srcset="./images/nazar.jpg 1x, ./images/nazar-2x.jpg 2x"
                 class="loved-img"
                 src="./images/nazar.jpg"
                 alt="Nazar Babenko"
                 width="80"
-                height="80"
               />
               <h3 class="loved-subtitle">Nazar Babenko</h3>
               <p class="loved-item-text">
@@ -630,11 +857,11 @@
             </li>
             <li class="loved-item">
               <img
+                srcset="./images/olena.jpg 1x, ./images/olena-2x.jpg 2x"
                 class="loved-img"
                 src="./images/olena.jpg"
                 alt="Olena Kampusch"
                 width="80"
-                height="80"
               />
               <h3 class="loved-subtitle">Olena Kampusch</h3>
               <p class="loved-item-text">
@@ -729,6 +956,14 @@
               </li>
               <li class="footer-menu-item">
                 <a class="footer-menu-link link" href="#made">How it’s made?</a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link link" href="#products"
+                  >Our products</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link link" href="#sellers">Top sellers</a>
               </li>
               <li class="footer-menu-item">
                 <a class="footer-menu-link link" href="#loved">
@@ -836,5 +1071,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobil-menu.js"></script>
   </body>
 </html>
